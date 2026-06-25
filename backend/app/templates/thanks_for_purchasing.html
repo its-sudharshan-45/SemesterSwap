@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #334155; margin: 0; padding: 0; background-color: #f8fafc; }
+    .container { max-width: 580px; margin: 30px auto; padding: 24px; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .header { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); padding: 20px; border-radius: 12px; text-align: center; color: #ffffff; margin-bottom: 24px; }
+    .header h2 { margin: 0; font-size: 20px; font-weight: 800; }
+    .details { background-color: #f1f5f9; padding: 16px; border-radius: 12px; margin-bottom: 24px; }
+    .details-row { display: flex; margin-bottom: 8px; font-size: 14px; }
+    .details-row:last-child { margin-bottom: 0; }
+    .label { font-weight: 700; color: #64748b; width: 140px; flex-shrink: 0; }
+    .value { color: #1e293b; }
+    .btn { display: inline-block; background-color: #3b82f6; color: #ffffff; text-decoration: none; padding: 12px 24px; font-weight: 700; font-size: 14px; border-radius: 10px; text-align: center; margin-top: 10px; }
+    .footer { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Thanks for Purchasing!</h2>
+    </div>
+    <p style="font-size: 15px; margin-top: 0;">Hello <strong>{buyerName}</strong>,</p>
+    <p style="font-size: 14px;">Thanks for purchasing <strong>{productName}</strong> on SemesterSwap!</p>
+    <p style="font-size: 14px;">Your order has been completed successfully as both you and the seller, <strong>{sellerName}</strong> ({sellerEmail}), have confirmed the transaction.</p>
+    
+    <div class="details">
+      <div class="details-row"><span class="label">Product:</span><span class="value">{productName}</span></div>
+      <div class="details-row"><span class="label">Seller:</span><span class="value">{sellerName} ({sellerEmail})</span></div>
+      <div class="details-row"><span class="label">Status:</span><span class="value">COMPLETED</span></div>
+    </div>
+
+    <p style="font-size: 13px; color: #64748b;">Thank you for using SemesterSwap to swap items safely on campus. We hope to see you again soon!</p>
+
+    <div style="text-align: center;">
+      <a href="{FRONTEND_URL}/orders/{requestId}" class="btn">View Order Details</a>
+    </div>
+
+    <div class="footer">
+      Regards,<br>SemesterSwap Team
+    </div>
+  </div>
+</body>
+</html>

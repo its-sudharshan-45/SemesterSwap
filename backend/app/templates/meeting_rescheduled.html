@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #334155; margin: 0; padding: 0; background-color: #f8fafc; }
+    .container { max-width: 580px; margin: 30px auto; padding: 24px; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .header { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 20px; border-radius: 12px; text-align: center; color: #ffffff; margin-bottom: 24px; }
+    .header h2 { margin: 0; font-size: 20px; font-weight: 800; }
+    .details { background-color: #f1f5f9; padding: 16px; border-radius: 12px; margin-bottom: 24px; }
+    .details-row { display: flex; margin-bottom: 8px; font-size: 14px; }
+    .details-row:last-child { margin-bottom: 0; }
+    .label { font-weight: 700; color: #64748b; width: 140px; flex-shrink: 0; }
+    .value { color: #1e293b; }
+    .btn { display: inline-block; background-color: #f59e0b; color: #ffffff; text-decoration: none; padding: 12px 24px; font-weight: 700; font-size: 14px; border-radius: 10px; text-align: center; margin-top: 10px; }
+    .footer { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Meeting Proposal Rescheduled</h2>
+    </div>
+    <p style="font-size: 15px; margin-top: 0;">Hello <strong>{buyerName}</strong>,</p>
+    <p style="font-size: 14px;">The seller, <strong>{sellerName}</strong> ({sellerEmail}), has counter-proposed new meeting coordinates for <strong>{productName}</strong>.</p>
+    
+    <div class="details">
+      <div class="details-row"><span class="label">New Date:</span><span class="value">{date}</span></div>
+      <div class="details-row"><span class="label">New Time:</span><span class="value">{timeSlot}</span></div>
+      <div class="details-row"><span class="label">New Location:</span><span class="value">{location}</span></div>
+    </div>
+
+    <p style="font-size: 13px; color: #64748b;">Please review the new proposed coordinates and accept them inside your SemesterSwap console to finalize the swap.</p>
+
+    <div style="text-align: center;">
+      <a href="{FRONTEND_URL}/order-tracking/{meetingId}" class="btn">Review Proposal</a>
+    </div>
+
+    <div class="footer">
+      Regards,<br>SemesterSwap Team
+    </div>
+  </div>
+</body>
+</html>

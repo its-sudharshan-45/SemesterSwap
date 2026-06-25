@@ -1,0 +1,15 @@
+{
+  "venvPath": "d:/SemesterSwap/backend",
+  "venv": ".venv",
+  "extraPaths": [
+    ".",
+    "backend/.venv/Lib/site-packages"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "backend/.venv"
+  ]
+}
+
+

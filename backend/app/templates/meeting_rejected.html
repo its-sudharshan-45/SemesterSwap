@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #334155; margin: 0; padding: 0; background-color: #f8fafc; }
+    .container { max-width: 580px; margin: 30px auto; padding: 24px; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .header { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); padding: 20px; border-radius: 12px; text-align: center; color: #ffffff; margin-bottom: 24px; }
+    .header h2 { margin: 0; font-size: 20px; font-weight: 800; }
+    .btn { display: inline-block; background-color: #4f46e5; color: #ffffff; text-decoration: none; padding: 12px 24px; font-weight: 700; font-size: 14px; border-radius: 10px; text-align: center; margin-top: 10px; }
+    .footer { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Meeting Request Declined</h2>
+    </div>
+    <p style="font-size: 15px; margin-top: 0;">Hello <strong>{buyerName}</strong>,</p>
+    <p style="font-size: 14px;">The seller, <strong>{sellerName}</strong> ({sellerEmail}), has declined your meeting request for <strong>{productName}</strong>.</p>
+    
+    <p style="font-size: 13px; color: #64748b; margin-bottom: 24px;">You can continue exploring other listings or contact the seller for more information.</p>
+
+    <div style="text-align: center;">
+      <a href="{FRONTEND_URL}/products/{productId}" class="btn">View Listing</a>
+    </div>
+
+    <div class="footer">
+      Regards,<br>SemesterSwap Team
+    </div>
+  </div>
+</body>
+</html>

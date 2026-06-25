@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --brand-50: 253 252 232;   /* #fdfce8 (Light Yellow) */
+  --brand-100: 255 228 230;  /* #ffe4e6 (Rose 100) */
+  --brand-200: 254 205 211;  /* #fecdd3 (Rose 200) */
+  --brand-300: 254 164 175;  /* #fda4af (Rose 300) */
+  --brand-400: 194 65 12;    /* #c2410c (Dark Orange 700) */
+  --brand-500: 153 27 27;    /* #991b1b (Crimson Red 800) */
+  --brand-600: 127 29 29;    /* #7f1d1d (Maroon 900) */
+  --brand-700: 159 18 57;    /* #9f1239 (Rose 800) */
+  --brand-800: 136 19 55;    /* #881337 (Rose 900) */
+  --brand-900: 76 5 25;      /* #4c0519 (Rose 950) */
+
+  --darkbg-sidebar: 30 31 36;
+  --darkbg-card: 24 25 30;
+  --darkbg-body: 15 16 19;
+  --darkbg-border: 42 44 53;
+}
+
+.dark {
+  --brand-50: 10 15 29;      /* #0a0f1d */
+  --brand-100: 15 23 42;     /* #0f172a */
+  --brand-200: 30 41 59;     /* #1e293b */
+  --brand-300: 125 211 252;  /* #7dd3fc (Sky 300) */
+  --brand-400: 56 189 248;   /* #38bdf8 (Sky 400) */
+  --brand-500: 125 211 252;  /* #7dd3fc (Sky 300 - Light Sky Blue primary) */
+  --brand-600: 56 189 248;   /* #38bdf8 (Sky 400 - Hover) */
+  --brand-700: 2 132 199;    /* #0284c7 */
+  --brand-800: 3 105 161;    /* #0369a1 */
+  --brand-900: 7 89 133;     /* #075985 */
+
+  --darkbg-body: 7 11 25;     /* #070b19 */
+  --darkbg-card: 15 23 42;    /* #0f172a */
+  --darkbg-sidebar: 9 14 26;  /* #090e1a */
+  --darkbg-border: 30 41 59;  /* #1e293b */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased transition-colors duration-200;
+  }
+}
+
+.bg-grid-pattern {
+  background-color: #fdfce8;
+  background-image: 
+    linear-gradient(to right, rgba(153, 27, 27, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(153, 27, 27, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.dark .bg-grid-pattern {
+  background-color: #070b19;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+
+/* Custom scrollbars for a premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #2a2c35;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 9999px;
+}
+
+/* Glassmorphism effects */
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-md border border-slate-200/50 shadow-sm;
+}
+
+.dark .glass-panel {
+  @apply bg-darkbg-card/75 backdrop-blur-md border-darkbg-border/60 shadow-lg shadow-black/10;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; filter: drop-shadow(0 0 5px rgba(82, 117, 255, 0.2)); }
+  50% { opacity: 0.8; filter: drop-shadow(0 0 15px rgba(82, 117, 255, 0.4)); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+/* ----------------------------------------------------
+   UI Enhancements: Light Lemony Yellow Theme Overrides
+   ---------------------------------------------------- */
+html:not(.dark) body {
+  background-color: #fdfce8;
+}
+
+html:not(.dark) .bg-white {
+  background-color: #fffdf5 !important; /* Soft warm ivory cream */
+}
+
+html:not(.dark) .bg-slate-50 {
+  background-color: #fffaf0 !important; /* Soft warm peach white */
+}
+
+html:not(.dark) .border-slate-100,
+html:not(.dark) .border-slate-200 {
+  border-color: #fecdd3 !important; /* Rose border */
+}
+
+html:not(.dark) .glass-panel {
+  background-color: rgba(255, 251, 240, 0.8) !important;
+  border-color: rgba(254, 205, 211, 0.6) !important;
+}
+
+/* Accessible Font Colors on Lemony Background */
+html:not(.dark) .text-slate-400 {
+  color: #5c4f4a !important; /* Upgraded to Warm Stone/Charcoal for contrast */
+}
+
+html:not(.dark) .text-slate-500 {
+  color: #443c39 !important; /* Upgraded to Dark Stone for contrast */
+}
+
+html:not(.dark) .text-slate-600 {
+  color: #292524 !important; /* Upgraded to Stone 800 for high readability */
+}
+
+/* Eliminate Blue & Green/Indigo in Light Theme with Crimson, Maroon & Dark Orange */
+html:not(.dark) .text-indigo-500,
+html:not(.dark) .text-indigo-600,
+html:not(.dark) .text-blue-500,
+html:not(.dark) .text-blue-600,
+html:not(.dark) .text-blue-800,
+html:not(.dark) .text-brand-500,
+html:not(.dark) .text-brand-650 {
+  color: #991b1b !important; /* Crimson Red 800 */
+}
+
+html:not(.dark) .bg-indigo-50,
+html:not(.dark) .bg-blue-50,
+html:not(.dark) .bg-brand-50 {
+  background-color: #fff1f2 !important; /* Soft rose cream */
+}
+
+html:not(.dark) .bg-blue-50\/20,
+html:not(.dark) .bg-brand-50\/20,
+html:not(.dark) .bg-brand-50\/50,
+html:not(.dark) .bg-brand-50\/70 {
+  background-color: rgba(255, 241, 242, 0.5) !important;
+}
+
+html:not(.dark) .bg-indigo-500\/10,
+html:not(.dark) .bg-indigo-500\/5,
+html:not(.dark) .bg-brand-500\/5,
+html:not(.dark) .bg-brand-500\/10 {
+  background-color: rgba(153, 27, 27, 0.08) !important; /* Soft crimson tint */
+}
+
+html:not(.dark) .bg-brand-500 {
+  background-color: #991b1b !important; /* Crimson */
+}
+
+html:not(.dark) .hover\:bg-brand-600:hover {
+  background-color: #7f1d1d !important; /* Maroon hover */
+}
+
+html:not(.dark) .border-indigo-200,
+html:not(.dark) .border-indigo-200\/10,
+html:not(.dark) .border-blue-100\/30,
+html:not(.dark) .border-blue-200,
+html:not(.dark) .border-blue-200\/50,
+html:not(.dark) .border-blue-500\/20,
+html:not(.dark) .border-brand-100,
+html:not(.dark) .border-brand-200,
+html:not(.dark) .border-brand-200\/10,
+html:not(.dark) .border-brand-200\/20,
+html:not(.dark) .border-brand-200\/30,
+html:not(.dark) .border-brand-200\/50,
+html:not(.dark) .border-brand-500 {
+  border-color: #fecdd3 !important; /* Rose border */
+}
+
+html:not(.dark) .shadow-brand-500\/10,
+html:not(.dark) .shadow-brand-500\/15,
+html:not(.dark) .shadow-brand-500\/20 {
+  --tw-shadow-color: rgba(153, 27, 27, 0.15) !important;
+}
+
+html:not(.dark) .ring-brand-500\/10 {
+  --tw-ring-color: rgba(153, 27, 27, 0.1) !important;
+}
+
+/* Redefine gradient flow in light theme to go Crimson-to-Maroon instead of brand-to-indigo */
+html:not(.dark) .from-brand-500 {
+  --tw-gradient-from: #991b1b !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(153, 27, 27, 0)) !important;
+}
+html:not(.dark) .from-brand-600 {
+  --tw-gradient-from: #7f1d1d !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(127, 29, 29, 0)) !important;
+}
+html:not(.dark) .to-indigo-500,
+html:not(.dark) .to-indigo-600,
+html:not(.dark) .to-brand-600 {
+  --tw-gradient-to: #4c0519 !important; /* Maroon Black */
+}
+
+/* ----------------------------------------------------
+   UI Enhancements: Dark Theme Customizations
+   ---------------------------------------------------- */
+
+/* Ensure dark navy text inside the light sky blue buttons in dark mode */
+.dark .bg-brand-500 {
+  color: #070b19 !important;
+  font-weight: 700 !important;
+}
+
+.dark .hover\:bg-brand-600:hover {
+  background-color: rgb(56 189 248) !important;
+  color: #070b19 !important;
+}
+
+/* Ensure Swap text in header is light sky blue in dark mode */
+.dark .text-brand-500 {
+  color: rgb(125 211 252) !important;
+}
+
+
