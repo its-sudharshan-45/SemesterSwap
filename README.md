@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # SemesterSwap
 
@@ -10,10 +10,11 @@
 [![Supabase](https://img.shields.io/badge/Supabase-Auth%20%26%20DB-3ECF8E?style=flat-square&logo=supabase&logoColor=white)](https://supabase.com/)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-semester--swap.vercel.app-6366f1?style=flat-square&logo=vercel&logoColor=white)](https://semester-swap-seven.vercel.app)
 
 SemesterSwap is a trust-first peer-to-peer marketplace where verified college students can safely buy, sell, and exchange textbooks, lab equipment, notes, and semester essentials — powered by a multi-provider AI engine and a robust transaction safety framework.
 
-[Features](#-features) · [Architecture](#-architecture) · [Setup](#-setup) · [API Docs](#-api-reference) · [Testing](#-testing)
+[🚀 Live Demo](https://semester-swap-seven.vercel.app) · [Features](#-features) · [Architecture](#-architecture) · [Setup](#-setup) · [API Docs](#-api-reference) · [Testing](#-testing)
 
 </div>
 
