@@ -5,7 +5,7 @@ from backend.app.config import settings
 # If using SQLite, allow multithreading access and disable insertmanyvalues
 connect_args = {}
 extra_params = {}
-db_url = settings.DATABASE_URL
+db_url = settings.DATABASE_URL.strip().strip("\"'")
 if db_url.startswith("postgres://"):
     db_url = db_url.replace("postgres://", "postgresql://", 1)
 
